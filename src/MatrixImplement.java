@@ -4,11 +4,14 @@ import java.util.Scanner;
 
 public class MatrixImplement {
 
-    public void outputArray (String[][] matrix){
+    public void outputArray (String[][] matrix, Display d){
         for (int row = 0; row < matrix.length; row++) {
-            for (int column = 0; column < matrix[row].length; column++)
-                System.out.printf("%s ", matrix[row][column]);
-            System.out.println();
+            for (int column = 0; column < matrix[row].length; column++) {
+                d.displaySingoloElemento(matrix[row][column]);
+                //System.out.printf("%s ", matrix[row][column]);
+            }
+            d.displayACapo();
+           // System.out.println();
         }
     }
     // Value is the element we want to insert into the matrix and n is its dimension.
